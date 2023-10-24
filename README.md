@@ -58,7 +58,7 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
     branch: treasurehunt-alart-index
 
 - As a user, if I select the winning square, the question mark will become a treasure emoji. If I select the losing square, the question mark will become a bomb emoji.
-
+    branch: winner-loser
 
 - As a user, I can click on a “Play Again” button that will restart the game.
 
