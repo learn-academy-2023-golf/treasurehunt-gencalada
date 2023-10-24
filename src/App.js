@@ -18,7 +18,11 @@ const App = () => {
   ])
 
   const handleGamePlay = (index) => {
-    alert(index)
+    // alert(index)
+    let updatedBoard = [...board]
+    updatedBoard[index] = "🎄"
+    setBoard(updatedBoard)
+
   }
 
   return (
