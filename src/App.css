@@ -16,3 +16,10 @@ h1 {
   width: 620px;
   margin: auto;
 }
+
+.restartButton {
+  margin: auto;
+  height: 50px;
+  width: 100px;
+  font-size: 25px;
+}
