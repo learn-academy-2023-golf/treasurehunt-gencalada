@@ -22,6 +22,22 @@ const [bombLocation, setBombLocation] = useState(Math.floor(Math.random() * boar
 console.log("treasure:", treasureLocation)
 console.log("bomb:", bombLocation)
 
+const restartGame = () => {
+  let defaultBoard = [
+    "?",
+    "?",
+    "?",
+    "?",
+    "?",
+    "?",
+    "?",
+    "?",
+    "?"
+  ]
+  setBoard(defaultBoard)
+  setTreasureLocation(Math.floor(Math.random() * board.length))
+  setBombLocation(Math.floor(Math.random() * board.length))
+}
 
 const handleGamePlay = (index) => {
   // alert(index)
@@ -33,14 +49,10 @@ const handleGamePlay = (index) => {
     } else if(bombLocation === index) {
       updatedBoard[index] = "💣"
     setBoard(updatedBoard)
-    } else {
-      updatedBoard[index] = "🎄"
-    setBoard(updatedBoard)
+      } else {
+        updatedBoard[index] = "🎄"
+        setBoard(updatedBoard)
     }
-
-
-    updatedBoard[index] = "🎄"
-    setBoard(updatedBoard)
 
   }
 
@@ -58,6 +70,7 @@ const handleGamePlay = (index) => {
              />
           )
         })}
+        <button className="restartButton" onClick={restartGame}>Restart! 👍</button>
       </div>
     </>
   )
